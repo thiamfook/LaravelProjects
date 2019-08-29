@@ -9,13 +9,17 @@
     <title>@yield('title')</title>
 </head>
 <body>
+    <header class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+       </ul>
+    </header>
     <div class="container">
         @yield('content')
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-            <li><a href="/about">About Us</a></li>
         </ul>
     </div>
     <!-- Optional JavaScript -->
