@@ -1,18 +1,17 @@
 {{-- projects/create --}}
 @extends('layout')
 
-@section('title', 'Create a New Projects')
+@section('title', 'Create a New Project')
 
 @section('content')
 
-    <h1>Create a New Projects</h1>
-    <form action="/projects/store" method="POST">
+    <form action="/projects" method="POST">
     @csrf
     <div>
-        <input name="title" type="text" placeholder="Project Title" class="form-control">
+        <input name="title" type="text" placeholder="Project Title" class="form-control" required autofocus autocomplete="off">
     </div>
     <div>
-        <textarea name="description" id="description" cols="30" rows="10" placeholder="Project Description" class="form-control"></textarea>
+        <textarea name="description" id="description" cols="30" rows="10" placeholder="Project Description" class="form-control" required></textarea>
     </div>
     <div>
         <button type="submit" class="btn btn-primary">Submit</button>

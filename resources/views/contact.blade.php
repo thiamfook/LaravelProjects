@@ -4,8 +4,6 @@
 
 @section('content')
 
-    <h1>Contact Us</h1>
-
     <form action="/" action="POST">
         @csrf
         <div class="form">
