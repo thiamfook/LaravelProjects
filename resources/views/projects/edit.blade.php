@@ -5,18 +5,33 @@
 
 @section('content')
 
+    @if ($errors->any())
+    <div class="alert alert-danger" role="alert">
+        <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+        </ul>
+    </div>
+    @endif
     <form action="/projects/{{$project->id}}" method="POST">
     @csrf
     @method('PATCH')
     <div>
-        <input name="title" type="text" placeholder="Project Title" class="form-control" value="{{$project->title}}" required autofocus autocomplete="off">
+        <input name="title" type="text" placeholder="Project Title" 
+            class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" 
+            value="{{ $errors->has('title') ? old('title') : $project->title }}" 
+            required autofocus autocomplete="off">
     </div>
     <div>
-        <textarea name="description" id="description" cols="30" rows="10" placeholder="Project Description" class="form-control" required>{{$project->description}}</textarea>
+        <textarea name="description" id="description" cols="30" rows="10" 
+            placeholder="Project Description" 
+            class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" 
+            required>{{ $errors->has('description') ? old('description') : $project->description }}</textarea>
     </div>
     <div>
         <button type="submit" class="btn btn-primary">Save</button>
-        <button type="button" class="btn btn-link" onclick="location.href='/projects'">Cancel</button>
+        <button type="button" class="btn btn-link" onclick="location.href='/projects/{{ $project->id }}'">Cancel</button>
     </div>
     </form>
     <form action="/projects/{{ $project->id }}" method="POST">

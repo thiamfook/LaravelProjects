@@ -29,4 +29,15 @@
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus minima eos atque, blanditiis nesciunt impedit assumenda aperiam necessitatibus illum vero fugit quos qui distinctio eum itaque ut? Nam, temporibus voluptatibus?
   </p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel illo labore, eaque doloribus minus natus commodi deserunt! Ex, dolores dolorem commodi et a aperiam illo consectetur distinctio recusandae incidunt voluptatibus?</p>
+  <div class="card">
+      <div class="card-header">
+        Our Believes
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>If you are not writing using right hand, then you are writing using left hand.</p>
+          <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        </blockquote>
+      </div>
+    </div>
 @endsection

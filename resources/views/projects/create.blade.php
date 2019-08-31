@@ -5,13 +5,27 @@
 
 @section('content')
 
+    @if ($errors->any())
+    <div class="alert alert-danger" role="alert">
+        <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+        </ul>
+    </div>
+    @endif
     <form action="/projects" method="POST">
     @csrf
     <div>
-        <input name="title" type="text" placeholder="Project Title" class="form-control" required autofocus autocomplete="off">
+    <input name="title" type="text" placeholder="Project Title" 
+        class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" 
+        value="{{ old('title') }}" required autofocus autocomplete="off">
     </div>
     <div>
-        <textarea name="description" id="description" cols="30" rows="10" placeholder="Project Description" class="form-control" required></textarea>
+        <textarea name="description" id="description" cols="30" rows="10" 
+            placeholder="Project Description" 
+            class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" 
+            required>{{ old('description') }}</textarea>
     </div>
     <div>
         <button type="submit" class="btn btn-primary">Submit</button>

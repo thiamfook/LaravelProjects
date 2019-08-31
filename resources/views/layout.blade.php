@@ -17,6 +17,7 @@
             <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
        </ul>
     </header>
+
     <main role="main" class="flex-shrink-0">
     <div class="container">
         <h1>@yield('title')</h1>
@@ -24,11 +25,13 @@
         @yield('content')
     </div>
     </main>
+
     <footer class="footer mt-auto py-3">
     <div class="container">
         <span class="text-muted">Place sticky footer content here.</span>
     </div>
     </footer>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

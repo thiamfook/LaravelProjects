@@ -9,7 +9,7 @@
     @if ($projects->count())
         <ul>
         @foreach ($projects as $project)
-            <li><a href="/projects/{{ $project->id }}/edit">{{ $project->title }}</a></li>
+            <li><a href="/projects/{{ $project->id }}">{{ $project->title }}</a></li>
         @endforeach
         </ul>
     @endif
