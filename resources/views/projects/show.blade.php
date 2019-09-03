@@ -20,10 +20,12 @@
     @if ($project->tasks->count())
         <h3>Tasks:</h3>
         @foreach ($project->tasks as $task)
-            <form action="" method="POST">
+            <form action="/tasks/{{ $task->id }}" method="POST"> 
+                @csrf
+                @method('PATCH')
                 <div class="form-check">
-                    <input type="checkbox" id="{{ $task->id }}" value="{{ $task->id }}"{{ $task->completed ? ' checked="checked"': '' }}>
-                    <label class="form-check-label" for="{{ $task->id }}">
+                    <input type="checkbox" name="completed" value="{{ $task->id }}"{!! $task->completed ? ' checked="checked"': '' !!} onChange="this.form.submit()">
+                    <label class="form-check-label" for="completed"{!! $task->completed ? ' style="text-decoration: line-through"' : '' !!}>
                         {{ $task->description }}
                     </label>
                 </div>
