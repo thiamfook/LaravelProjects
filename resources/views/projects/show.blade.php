@@ -33,4 +33,14 @@
         @endforeach
     @endif
 
+    <div class="form">
+        <form action="/tasks" method="POST">
+            @csrf
+            <div>
+                <label for="description">New Task</label>
+                <input type="text" class="form-control" name="description" id="description" placeholder="New Task" value="{{ old('description') }}"><button class="btn btn-primary">Add Task</button>
+            </div>
+        </form>
+    </div>
+
 @endsection
