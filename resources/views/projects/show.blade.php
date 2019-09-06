@@ -5,15 +5,6 @@
 
 @section('content')
 
-    @if ($errors->any())
-    <div class="alert alert-danger" role="alert">
-        <ul>
-        @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-        </ul>
-    </div>
-    @endif
     <p>{{ $project->description }}</p>
     <p><a href="/projects/{{ $project->id }}/edit">Edit Project</a></p>
 
@@ -24,8 +15,8 @@
                 @csrf
                 @method('PATCH')
                 <div class="form-check">
-                    <input type="checkbox" name="completed" value="{{ $task->id }}"{!! $task->completed ? ' checked="checked"': '' !!} onChange="this.form.submit()">
-                    <label class="form-check-label" for="completed"{!! $task->completed ? ' style="text-decoration: line-through"' : '' !!}>
+                    <input class="form-check-input" type="checkbox" name="completed" id="{{ $task->id }}"{!! $task->completed ? ' checked="checked"': '' !!} onChange="this.form.submit()">
+                    <label class="form-check-label" for="{{ $task->id }}"{!! $task->completed ? ' style="text-decoration: line-through"' : '' !!}>
                         {{ $task->description }}
                     </label>
                 </div>
@@ -34,11 +25,13 @@
     @endif
 
     <div class="form">
-        <form action="/tasks" method="POST">
+        @include('errors')
+        <form action="/projects/{{ $project->id }}/tasks" method="POST">
             @csrf
             <div>
                 <label for="description">New Task</label>
-                <input type="text" class="form-control" name="description" id="description" placeholder="New Task" value="{{ old('description') }}"><button class="btn btn-primary">Add Task</button>
+                <input type="text" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" id="description" placeholder="New Task" value="{{ old('description') }}" required>
+                <button class="btn btn-primary">Add Task</button>
             </div>
         </form>
     </div>
