@@ -31,7 +31,7 @@ Route::get('/projects', 'ProjectController@index');
 Route::get('/projects/create', 'ProjectController@create');
 Route::get('/projects/{project}', 'ProjectController@show')->middleware('can:update,project');
 Route::get('/projects/{project}/edit', 'ProjectController@edit')->middleware('can:update,project');
-Route::post('/projects', 'ProjectController@store')->middleware('can:update,project');
+Route::post('/projects', 'ProjectController@store');
 Route::patch('/projects/{project}', 'ProjectController@update')->middleware('can:update,project');
 Route::delete('/projects/{project}', 'ProjectController@destroy')->middleware('can:update,project');
 
