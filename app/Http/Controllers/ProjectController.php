@@ -73,7 +73,7 @@ class ProjectController extends Controller
     }
 
     public function destroy(Project $project) {
-        $project->destroy($id);
+        $project->destroy($project->id);
         return redirect('/projects');
     }
 
