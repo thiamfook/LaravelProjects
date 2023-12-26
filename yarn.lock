@@ -1236,6 +1236,7 @@ async-each@^1.0.1:
 async@^2.6.2:
   version "2.6.4"
   resolved "https://registry.yarnpkg.com/async/-/async-2.6.4.tgz#706b7ff6084664cd7eae713f6f965433b5504221"
+
   dependencies:
     lodash "^4.17.14"
 
@@ -1482,8 +1483,9 @@ browserslist@^4.0.0, browserslist@^4.14.5, browserslist@^4.16.3, browserslist@^4
     node-releases "^1.1.71"
 
 buffer-from@^1.0.0:
-  version "1.1.1"
-  resolved "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.1.tgz"
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.2.tgz#2b146a6fd72e80b4f55d255f35ed59a3a9a41bd5"
+
 
 buffer-indexof@^1.0.0:
   version "1.1.1"
@@ -3138,6 +3140,7 @@ is-binary-path@~2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/is-binary-path/-/is-binary-path-2.1.0.tgz"
   dependencies:
+
     binary-extensions "^2.0.0"
 
 is-boolean-object@^1.1.0:
@@ -3709,7 +3712,6 @@ minimatch@^3.0.4:
 minimist@^1.2.0, minimist@^1.2.5:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.7.tgz#daa1c4d91f507390437c6a8bc01078e7000c4d18"
-
 
 
 mixin-deep@^1.2.0:
@@ -5014,8 +5016,9 @@ source-map-resolve@^0.5.0:
     urix "^0.1.0"
 
 source-map-support@~0.5.12, source-map-support@~0.5.19:
-  version "0.5.19"
-  resolved "https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.19.tgz"
+  version "0.5.21"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.21.tgz#04fe7c7f9e1ed2d662233c28cb2b35b9f63f6e4f"
+
   dependencies:
     buffer-from "^1.0.0"
     source-map "^0.6.0"
@@ -5027,6 +5030,7 @@ source-map-url@^0.4.0:
 source-map@0.6.1, source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz"
+
 
 source-map@^0.5.0, source-map@^0.5.6:
   version "0.5.7"
@@ -5216,8 +5220,9 @@ terser-webpack-plugin@^5.0.0, terser-webpack-plugin@^5.1.1:
     terser "^5.7.0"
 
 terser@^4.6.3:
-  version "4.8.0"
-  resolved "https://registry.npmjs.org/terser/-/terser-4.8.0.tgz"
+  version "4.8.1"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-4.8.1.tgz#a00e5634562de2239fd404c649051bf6fc21144f"
+
   dependencies:
     commander "^2.20.0"
     source-map "~0.6.1"
