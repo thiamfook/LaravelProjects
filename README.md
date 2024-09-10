@@ -2,7 +2,7 @@
 
 ![Laravel Logo](/public/img/logotype.min.svg)
 
-Testing out Laravel version __5.8__ & Bootstrap __4.4__.
+Testing out Laravel version __6.0__ & Bootstrap __5.0__.
 
 ## To test the application
 
